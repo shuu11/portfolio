@@ -1,0 +1,96 @@
+//----------------------------------------------------------------------
+//  文字エンコーディング宣言
+//----------------------------------------------------------------------
+@charset "utf-8";
+
+//----------------------------------------------------------------------
+//  インポート宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  変数宣言
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  mixin記述
+//----------------------------------------------------------------------
+
+//----------------------------------------------------------------------
+//  Sass記述
+//----------------------------------------------------------------------
+.p-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  &__inner {
+    padding: 0 1rem;
+  }
+
+}
+
+.p-header__icon{
+  margin:0 2rem;
+}
+
+.p-header__nav{
+  position:fixed;
+  width:50vw;
+  height:100vh;
+  top:0;
+  right:-100vw;
+  opacity: 0;
+  padding-top: 6rem;
+  color: $white;
+  background-color: $gray01;
+  transition: all 0.25s;
+
+  // js付与
+  &.click{
+    display: block;
+    top:0;
+    right:0;
+    opacity: 1;
+  }
+
+  a {
+    padding: 1rem 2rem;
+    color: $white;
+    background-color: $gray01;
+    transition: all 0.25s;
+
+    &:hover {
+      color: $gray01;
+      background-color: $white;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .p-header__nav{
+    position:static;
+    width: auto;
+    height:auto;
+    padding-top: 0;
+    opacity: 1;
+
+    a {
+      padding: 2rem 2rem;
+      transition: all 0.25s;
+      border-bottom: 2px solid transparent;
+      color: $white;
+      background-color: $gray02;
+
+      &:hover {
+        color: $white;
+        background-color: $gray03;
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*  END OF FILE                                       									*/
+/************************************************************************/
