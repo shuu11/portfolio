@@ -20,10 +20,10 @@
 //----------------------------------------------------------------------
 .p-sec04 {
 	&__main {
-		padding: 3rem 5px 0;
+		padding: 3rem 10px 0;
 
 		@include breakpoint(lg) {
-			padding: 8rem 0 0;
+			padding: 8rem 20px 0;
 		}
 
 		&--img {
